@@ -22,8 +22,8 @@ def getNumDraws(year):
     count=0
     
     #team1goals = 13 doesnt return any data
-    for i in range(12): 
-        subresp = requests.get(f'https://jsonmock.hackerrank.com/api/football_matches?year={year}&team1goals={i}&team2goals={i}')
+    for points in range(12): 
+        subresp = requests.get(f'https://jsonmock.hackerrank.com/api/football_matches?year={year}&team1goals={points}&team2goals={points}')
         subrespjson = subresp.json()
         
         #API only prints matches which have ties
